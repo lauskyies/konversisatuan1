@@ -6,8 +6,6 @@ st.title("🧪 Konversi Satuan Kimia")
 
 # Fungsi konversi
 def konversi_satuan(nilai: float, dari: str, ke: str) -> float:
-    dari = dari.lower()
-    ke = ke.lower()
 
     match (dari, ke):
         case ("mmol", "mol"):
