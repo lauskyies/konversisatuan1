@@ -52,6 +52,6 @@ ke_satuan = st.selectbox("Ke satuan:", [
 if st.button("Konversi"):
     hasil = konversi_satuan(nilai, dari_satuan, ke_satuan)
     if hasil is not None:
-        st.success(f"Hasil: {hasil:.6f} {ke_satuan}")
+        st.success(f"Hasil: {hasil:.6g} {ke_satuan}")
     else:
         st.error("Konversi tidak dikenali atau tidak valid.")
