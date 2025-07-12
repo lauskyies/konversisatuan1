@@ -18,9 +18,9 @@ def konversi_satuan(nilai: float, dari: str, ke: str) -> float:
             return nilai / 1000
         case ("g", "mg"):
             return nilai * 1000
-        case ("ml", "l"):
+        case ("mL", "L"):
             return nilai / 1000
-        case ("l", "ml"):
+        case ("L", "mL"):
             return nilai * 1000
         case ("ppm", "%"):
             return nilai / 10000
@@ -30,9 +30,9 @@ def konversi_satuan(nilai: float, dari: str, ke: str) -> float:
             return nilai / 1000
         case ("kg", "g"):
             return nilai * 1000
-        case ("mmol/l", "mol/l"):
+        case ("mmol/L", "mol/L"):
             return nilai / 1000
-        case ("mol/l", "mmol/l"):
+        case ("moL/L", "mmol/L"):
             return nilai * 1000
         case _:
             return None
@@ -41,11 +41,11 @@ def konversi_satuan(nilai: float, dari: str, ke: str) -> float:
 nilai = st.number_input("Masukkan nilai:", value=1.0)
 
 dari_satuan = st.selectbox("Dari satuan:", [
-    "mmol", "mol", "mg", "g", "kg", "ml", "l", "ppm", "%", "mmol/l", "mol/l"
+    "mmol", "mol", "mg", "g", "kg", "mL", "L", "ppm", "%", "mmol/L", "mol/L"
 ])
 
 ke_satuan = st.selectbox("Ke satuan:", [
-    "mmol", "mol", "mg", "g", "kg", "ml", "l", "ppm", "%", "mmol/l", "mol/l"
+    "mmol", "mol", "mg", "g", "kg", "mL", "L", "ppm", "%", "mmol/L", "mol/L"
 ])
 
 # Tombol konversi
